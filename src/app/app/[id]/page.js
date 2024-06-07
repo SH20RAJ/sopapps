@@ -18,8 +18,8 @@ const AppPage = async ({params}) => {
     <Nav/>
     <div className="container mx-auto p-4">
       <div className="flex flex-col items-center">
-        <img src={appDetails.icon} alt={`${appDetails.title} icon`} className="w-20 h-20 mb-4" />
-        <h1 className="text-3xl font-bold mb-4">{appDetails.title}</h1>
+        <img src={appDetails.icon} alt={`${appDetails.title} icon`} className="w-60 h-60 mb-4" />
+        <h1 className="text-4xl font-bold mb-4">{appDetails.title}</h1>
         <img src={appDetails.headerImage} alt={`${appDetails.title} header`} className="w-full h-60 object-cover mb-4" />
         <p className="text-lg mb-4" dangerouslySetInnerHTML={{__html : appDetails.descriptionHTML}}></p>
         <div className="w-full">
@@ -50,6 +50,11 @@ const AppPage = async ({params}) => {
           <a href={appDetails.reviews} target="_" className="text-blue-500">Read Reviews</a>
         </div>
       </div>
+    </div>
+    <div className="download text-center text-8xl">
+      <a href={
+        appDetails.playstoreUrl
+      } target="_" className="bg-blue-500 text-white px-4 py-2 rounded-md">Download</a>
     </div>
     <div className="suggesion">
       <h1 className=" text-4xl ">Suggested Apps</h1>
